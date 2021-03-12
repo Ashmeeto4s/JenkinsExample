@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         def SERVER_URL = "SERVER_URL"
-        def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
+//        def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
 
         debug {
             buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl')}\""
@@ -27,6 +27,7 @@ android {
             debuggable true
         }
         release {
+            buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl')}\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

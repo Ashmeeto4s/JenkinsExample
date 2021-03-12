@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val data =System.getenv("BUILD_URL")
-        Toast.makeText(this,data,Toast.LENGTH_LONG).show()
+        Toast.makeText(this,BuildConfig.SERVER_URL,Toast.LENGTH_LONG).show()
 
     }
 }

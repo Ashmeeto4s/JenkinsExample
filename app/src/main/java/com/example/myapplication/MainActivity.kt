@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val data =System.getenv("BaseUrl")
+        val data =System.getenv("BUILD_URL")
         Toast.makeText(this,data,Toast.LENGTH_LONG).show()
 
     }

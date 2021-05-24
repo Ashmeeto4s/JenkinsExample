@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<TextView>(R.id.type).setText(BuildConfig.BUILD_TYPE)
         Toast.makeText(this,BuildConfig.SERVER_URL,Toast.LENGTH_LONG).show()
+        Toast.makeText(this,BuildConfig.TESTT,Toast.LENGTH_LONG).show()
 
     }
 }

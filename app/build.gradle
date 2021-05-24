@@ -19,16 +19,22 @@ android {
 
     buildTypes {
         def SERVER_URL = "SERVER_URL"
+        def TESTT = "TESTT"
 //        def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
 
         debug {
             buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl')}\""
             minifyEnabled false
             debuggable true
+            buildConfigField("String", TESTT, "\"this is debug build genrated\"")
+
+
         }
 
         qa{
             initWith debug
+            buildConfigField("String", TESTT, "\"this is qaaa build genrated\"")
+
         }
         release {
             buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl')}\""

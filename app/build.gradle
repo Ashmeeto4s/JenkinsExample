@@ -26,6 +26,10 @@ android {
             minifyEnabled false
             debuggable true
         }
+
+        qa{
+            initWith debug
+        }
         release {
             buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl')}\""
             minifyEnabled false

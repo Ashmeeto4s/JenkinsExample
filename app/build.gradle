@@ -26,7 +26,7 @@ android {
 //        def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
 
         debug {
-            buildConfigField "String", SERVER_URL,BASE_URL
+            buildConfigField "String", SERVER_URL,URLL
             minifyEnabled false
             debuggable true
             buildConfigField("String", TESTT, "\"this is debug build genrated\"")

@@ -20,13 +20,13 @@ android {
     buildTypes {
         def SERVER_URL = "SERVER_URL"
         def TESTT = "TESTT"
-        def defUrl = 'http.kk.io'
+        def defUrl = "http.kk.io"
 
 
 //        def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
 
         debug {
-            buildConfigField "String", SERVER_URL,"\"${System.getenv('BaseUrl') ?: defUrl }\""
+            buildConfigField("String", SERVER_URL,"\"${System.getenv('BaseUrl') ?: defUrl }\"")
             minifyEnabled false
             debuggable true
             buildConfigField("String", TESTT, "\"this is debug build genrated\"")
